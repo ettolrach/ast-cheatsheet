@@ -1,0 +1,32 @@
+\wde{no number, Equivalence class} Let $E$ be an equivalence relation on a set $X$. The \textit{equivalence class} of an element $x \in X$ is the subset $E[x]$ of $X$, as defined in lemma 5.1.11. If we write the equiv. rel. as $\sim$, then we denote the equivalence class of $x$ by $[x]_{\sim}$ or just $[x]$.
+\wl{6.2.3} Let $\sim$ be an equivalence relation on a set $X$. Then for $x, y, \in X$, $x \sim y \iff [x] = [y]$.
+\wde{no number, Quotient} Let $E$ be an equiv. rel. on a set $X$. Then $E$ corresponds to a function $\bar{\epsilon} X \to \Pow(x)$, $x \mapsto E[x]$. Define $X/E$ the \textit{quotient of $X$ by $E$} to be the image of $\bar{\epsilon}$.
+\wl{no number} There is a unique function $\pi_E \colon X \to X/E$ such that $\pi_E(x) = E[X]$ for all $x \in X$; that is, the diagram
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzIsMCwiXFxtYXRoc2Nye1B9KFgpIl0sWzEsMSwiWC9FIl0sWzAsMSwiXFxiYXJ7XFxlcHNpbG9ufSJdLFswLDIsIlxccGlfRSIsMl0sWzIsMSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+\[\begin{tikzcd}[cramped,row sep=tiny]
+    X && {\mathscr{P}(X)} \\
+    & {X/E}
+    \arrow["{\bar{\epsilon}}", from=1-1, to=1-3]
+    \arrow["{\pi_E}"', from=1-1, to=2-2]
+    \arrow["j"', hook, from=2-2, to=1-3]
+\end{tikzcd}\]
+commutes. We call $\pi_E$ the \textit{natural surjection}, \textit{canonical surjection}, or \textit{quotient map}.
+\wlog{6.2.5} Let $\sim$ be an equivalence relation on a set $X$. Then for $x, y \in X$, $\pi_{\sim}(x) = \pi_{\sim}(y) \iff x \sim y$.
+\wpr{6.2.8, Universal property of quotients} Let $\sim$ be an equivalence relation on a set $X$. Let $Y$ be a set and $f \colon X \to Y$ a function such that for $x, x' \in X$, $x \sim x' \implies f(x) = f(x')$. Then there is a unique function $\bar{f} \colon X/\sim \to Y$ such that $\bar{f}(\pi_{\sim}(x)) = f(x)$ for all $x \in X$. As a commutative diagram:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzAsMSwiWC9cXHNpbSJdLFsxLDEsIlkiXSxbMCwxLCJcXHBpX3tcXHNpbX0iLDJdLFsxLDIsIlxcYmFye2Z9IiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzAsMiwiZiJdXQ==
+\[\begin{tikzcd}[cramped]
+    X \\
+    {X/\sim} & Y
+    \arrow["{\pi_{\sim}}"', from=1-1, to=2-1]
+    \arrow["f", from=1-1, to=2-2]
+    \arrow["{\bar{f}}"', dotted, from=2-1, to=2-2]
+\end{tikzcd}\]
+\wt{6.2.11, First isomorphism theorem} Let $X$ and $Y$ be sets, and let $f \colon X \to Y$ be a surjection. Then there is a unique isomorphism $\bar{f} \colon X/\sim_f \to Y$ such that $\bar{f}(\pi_{\sim_f}(x)) = f(x)$ for all $x \in X$. In particular, $X/\sim_f \cong Y$. As a commutative diagram:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzAsMSwiWC9cXHNpbV9mIl0sWzEsMSwiWSJdLFswLDEsIlxccGlfe1xcc2ltX2Z9IiwyXSxbMSwyLCJcXGJhcntmfSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFswLDIsImYiXV0=
+\[\begin{tikzcd}[cramped]
+	X \\
+	{X/\sim_f} & Y
+	\arrow["{\pi_{\sim_f}}"', from=1-1, to=2-1]
+	\arrow["f", from=1-1, to=2-2]
+	\arrow["{\bar{f}}"', "\cong", dotted, from=2-1, to=2-2]
+\end{tikzcd}\]

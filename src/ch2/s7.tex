@@ -1,0 +1,19 @@
+\wde{2.7.3 Function set} Let $X$ and $Y$ be sets. A \textit{function set} from $X$ to $Y$ is a set $F$ together with a function $e \colon F \times X \to Y$, with the following property: for all sets $A$ and functions $q \colon A \times X \to Y$, there is a unique function $\bar{q} \colon A \to F$ such that $q(a, x) = e(\bar{q}(a), x)$ for all $a \in A$ and $x \in X$. A function $e$ is called \textit{evaluation}.
+\wax{6: Function sets} Let $X$ and $Y$ be sets. Then there exists a function set form $X$ to $Y$.
+\wl{2.7.5} Let $X$ and $Y$ be sets. Take sets $F$ and $F'$ and functions $F \times X \xrightarrow{e} Y$, $F' \times X \xrightarrow{e'} Y$, and suppose there exists an isomorphism $j \colon F \to F'$ such that the diagram
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJGIFxcdGltZXMgWCJdLFswLDIsIkYnIFxcdGltZXMgWCJdLFsyLDEsIlkiXSxbMCwxLCJqIFxcdGltZXMgXFx0ZXh0e2lkfV9YIiwyXSxbMCwyLCJlIl0sWzEsMiwiZSciLDJdXQ==
+\[\begin{tikzcd}[cramped,row sep=tiny]
+	{F \times X} \\
+	&& Y \\
+	{F' \times X}
+	\arrow["e", from=1-1, to=2-3]
+	\arrow["{j \times \text{id}_X}"', "\cong", from=1-1, to=3-1]
+	\arrow["{e'}"', from=3-1, to=2-3]
+\end{tikzcd}\]
+commutes. Then $F$ together with $e$ is a function set from $X$ to $Y$ if and only if $F'$ together with $e'$ is.
+\wl{2.7.6} Let $X$ and $Y$ be sets. Let $F$ together with $e \colon F \times X \to Y$ be a function set form $X$ to $Y$, and let $F'$ together with $e' \colon F' \times X \to Y$ be another function set from $X$ to $Y$. Then there is a unique isomorphism $j \colon F \to F'$ such that the diagram [same as the earlier diagram in 2.7.5] commutes. In particular, $F \cong F'$.
+\wde{no number} We write $Y^X$ for the function set from $X$ to $Y$, and $\text{ev}_{X, Y} \colon Y^X \times X \to Y$ (or sometimes just $\text{ev}$) for the evaluation function. Given a function $q \colon A \times X \to Y$, we write $\bar{q}$ for the corresponding function $A \to Y^X$. For a function $f \colon X \to Y$, we write $\bar{f}$ for the corresponding element of $Y^X$.
+\wde{2.7.8 X-indexed family} Let $X$ and $Y$ be sets. An \textit{$X$-indexed family of elements of $Y$} is a function from $X$ to $Y$.
+\we{2.7.9} Let $X$ be $\N$. Then $Y^X = Y^{\N}$ can be thought of as the set of sequences $(y_n)_{n \in \N}$ of elements of $Y$.
+\wl{2.7.10} \textbf{(i)} Let $X$ be a set and $v \colon Y \to Y'$ a function. Then there is a unique function $v^X \colon Y^X \to Y'^X$ such that $v^X(f) = v \circ f$ for all $f \in Y^X$. \textbf{(ii)} Let $Y$ be a set and $u \colon X \to X'$ a function. Then there is a unique function $Y^u \colon Y^{X'} \to Y^X$ such that $Y^u(f') = f' \circ u$ for all $f' \in Y^{X'}$.
+\wpr{2.7.12} \textbf{(i)} $(Y \times Z)^X \cong Y^X \times Z^X$ for all sets $X$, $Y$, $Z$, and $\mathbf{1}^X \cong \mathbf{1}$ for all sets $X$. \textbf{(ii)} $Z^{X \times Y} \cong (Z^Y)^X$ for all sets $X$, $Y$, $Z$, and $Y^{\mathbf{1}} \cong Y$ for all sets $Y$.

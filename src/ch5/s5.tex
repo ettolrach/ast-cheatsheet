@@ -1,0 +1,16 @@
+\wde{no number, Retraction} For sets $X$ and $Y$, a \textit{retraction} of a function $i \colon Y \to X$ is a function $f \colon X \to Y$ such that $f \circ i = \id_Y$.
+\wl{5.5.3.} Every injection with nonempty domain has a retraction.
+\wl{5.5.5} Let $X$ be a set. Then there is a function $X \setminus - \colon \Pow(X) \to \Pow(X)$ such that $(X \setminus -) (A) = X \setminus A$ for all $A \in \Pow(X)$.
+\wl{5.5.6} Let $X$ be a set. Then there exist functions $\bigcap, \bigcup \colon \Pow(\Pow(X)) \to \Pow(X)$ such that $\bigcap \mathscr{U}$ and $\bigcup \mathscr{U}$ are the subsets of $X$ with the property $x \in_X \bigcap \mathscr{U} \iff (x \in_X A \text{ for all } A \in \mathscr{U})$ (similar for $\bigcup$) for all $\mathscr{U} \in \Pow(\Pow(X))$
+\wl{5.5.8} Let $f \colon X \to Y$ be a function. Let $B \xhookrightarrow{j} Y$ be a subset such that $\im f \subseteq_Y B$. Then there is a unique function $f' \colon X \to B$ such taht $j(f'(x)) = f(x)$ for all $x \in X$. The function $f'$ is called the \textit{corestriction} pf $f$ to $B$.
+\wpr{5.5.10} Let $f \colon X \to Y$ be a function. Write $j$ for the inclusion $\im f \hookrightarrow Y$. Then there is a unique function $f' \colon X \to \im f$ such thtat the triangle
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJYIl0sWzIsMCwiWSJdLFsxLDEsIlxcdGV4dHtpbX0gZiJdLFswLDEsImYiXSxbMCwyLCJmJyIsMl0sWzIsMSwiaiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+\[\begin{tikzcd}[cramped,row sep=tiny]
+	X && Y \\
+	& {\text{im} f}
+	\arrow["f", from=1-1, to=1-3]
+	\arrow["{f'}"', from=1-1, to=2-2]
+	\arrow["j"', hook, from=2-2, to=1-3]
+\end{tikzcd}\]
+commutes, and $f'$ is surjective.
+\wc{5.5.11} Every function can be expressed as the composite of a surjective followed by an injection.

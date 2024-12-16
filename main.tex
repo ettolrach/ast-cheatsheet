@@ -3,8 +3,8 @@
 \usepackage{amsmath}
 \usepackage{multicol}
 \usepackage{titlesec}
-\titleformat{\subsection}[runin]{\normalfont\Large\bfseries}{\thesubsection.}{6pt}{}[]
-\titlespacing*{\subsection}
+\titleformat{\section}[runin]{\normalfont\Large\bfseries}{\thesection.}{6pt}{}[]
+\titlespacing*{\section}
 {0pt}{0pt}{0pt}
 
 
@@ -19,72 +19,90 @@
 \begin{document}
   \begin{multicols}{2}
     %
-    %  CHAPTER 1: Categories, Functors, \& Natural Transformations
+    %  CHAPTER 2: The axioms, part one
     %
-    \noindent\subsection*{Categories, Functors, \& Natural Transformations}
-    % 1.1 Categories
-    \input{src/ch1/s1.tex}
-    %
-    % 1.2 Functors
-    \input{src/ch1/s2.tex}
-    %
-    % 1.4 Natural Transformations
-    \input{src/ch1/s3.tex}
-    %
-    %
-    %  CHAPTER 2: Adjoints
-    %
-    \noindent\subsection*{Adjoints}
-    % 2.1 Definitions and Examples
-    \input{src/ch2/s1.tex}
-    %
-    % 2.2 Adjunctions via Units and Counits
+    \setcounter{section}{1}
+    \noindent\section{The axioms, part one}
+    % 2.2 Associativity and identities
     \input{src/ch2/s2.tex}
     %
-    % 2.3 Adjunctions via Initial Objects
+    % 2.3 The one-element set
     \input{src/ch2/s3.tex}
     %
+    % 2.4  A function is determined by its effect on elements
+    \input{src/ch2/s4.tex}
     %
-    %  CHAPTER 3: Interlude on Sets
+    % 2.5 The empty set
+    \input{src/ch2/s5.tex}
     %
-    \noindent\subsection*{Interlude on Sets}
-    % 3.1 Constructions with Sets
-    % No Theorems, may add things though.
+    % 2.6 Products
+    \input{src/ch2/s6.tex}
     %
-    % 3.2 Small and Large Categories
+    % 2.7 Sets of functions
+    \input{src/ch2/s7.tex}
+    %
+    %
+    %  CHAPTER 3: The axioms, part two
+    %
+    \noindent\section{The axioms, part two}
+    % 3.1 Fibres
+    \input{src/ch3/s1.tex}
+    %
+    % 3.2 Subsets
     \input{src/ch3/s2.tex}
     %
+    % 3.3 The natural numbers
+    \input{src/ch3/s3.tex}
     %
-    %  CHAPTER 4: Representables
+    % 3.4 The axiom of choice
+    \input{src/ch3/s4.tex}
     %
-    \noindent\subsection*{Representables}
-    % 4.1 Definitions and Examples
+    %
+    %  CHAPTER 4: Subsets
+    %
+    \noindent\section{Subsets}
+    % 4.1 Elements and subsets
     \input{src/ch4/s1.tex}
     %
-    % 4.2 The Yoneda Lemma
+    % 4.2 Truth values
     \input{src/ch4/s2.tex}
     %
-    % 4.3 Consequences of the Yoneda Lemma
+    % 4.3 Operations on subsets
     \input{src/ch4/s3.tex}
     %
+    % 4.4 Images and preimages
+    \input{src/ch4/s4.tex}
     %
-    %  CHAPTER 5: Limits
     %
-    \noindent\subsection*{Limits}
-    % 5.1 Limits: definition and examples
+    %  CHAPTER 5: Relations
+    %
+    \noindent\section{Relations}
+    % 5.1. Definitions and examples of relations
     \input{src/ch5/s1.tex}
     %
-    % 5.2 Colimits: definition and examples
+    % 5.2 Graphs
     \input{src/ch5/s2.tex}
     %
-    % 5.3 Interactions between functors and limits
+    % 5.3 Quantifiers
     \input{src/ch5/s3.tex}
     %
+    % 5.3 Specifying subsets
+    \input{src/ch5/s4.tex}
     %
-    %  CHAPTER 6: Adjoints, Representables and Limits
+    % 5.3 Specifying funcitons
+    \input{src/ch5/s5.tex}
     %
-    \noindent\subsection*{Adjoints, Representables and Limits}
-    % 6.1 Limits in terms of representables and adjoints
-    \input{src/ch6/s1}
+    %
+    %  CHAPTER 6: Gluing
+    %
+    \noindent\section{Gluing}
+    % 6.1 Equivalence relations
+    \input{src/ch6/s1.tex}
+    %
+    % 6.2 Quotients
+    \input{src/ch6/s2.tex}
+    %
+    % 6.3 Disjoint unions and coproducts
+    \input{src/ch6/s3.tex}
   \end{multicols}
 \end{document}

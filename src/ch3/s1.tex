@@ -1,0 +1,17 @@
+\wde{3.1.4 Fibre} Let $f \colon X \to Y$ be a function and $y \in Y$. A \textit{fibre} of $f$ over $y$ is a set $U$ together with a function $i \colon U \to X$, such that $f(i(u)) = y$ for all $u \in U$ and the following property holds: for all sets $A$ and functions $q \colon A \to X$ such that $f(q(a)) = y$ for all $a \in A$, there is a unique function $\bar{q} \colon A \to U$ such that $q = i \circ \bar{q}$. We refer to $i$ as the \textit{inclusion} of the fibre.
+\we{3.1.5} Special case $A = \mathbf{1}$ is particularly important. It tells us that for all $x \in X$ satisfying $f(x) = y$, there is a unique $u \in U$ such that $x = i(u)$.
+\wax{7: Fibres} For every function $f \colon X \to Y$ and element $y \in Y$, there exists a fibre of $f$ over $y$.
+\wl{3.1.6} Let $f \colon X \to Y$ be a function and $y \in Y$. Take sets and functions $U \xrightarrow{i} X$ and $U' \xrightarrow{i'} X$, and suppose there exists an isomorphism $j \colon U \to U'$ such that the diagram
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJVIl0sWzIsMSwiWCJdLFswLDIsIlUnIl0sWzAsMSwiaSJdLFsyLDEsImknIiwyXSxbMCwyLCJqIiwyXV0=
+\[\begin{tikzcd}[cramped,row sep=tiny]
+	U \\
+	&& X \\
+	{U'}
+	\arrow["i", from=1-1, to=2-3]
+	\arrow["j"', "\cong", from=1-1, to=3-1]
+	\arrow["{i'}"', from=3-1, to=2-3]
+\end{tikzcd}\]
+commutes. Then $U \xrightarrow{i} X$ is a fibre of $f$ over $y$ if and only if $U' \xrightarrow{i'} X$ is.
+\wde{no number} The fibre of $f$ over $y$ is given the name $f^{-1}(y)$. The inclusion $f^{-1}(y) \to X$ is usually nameless or given the symbol $\hookrightarrow$.
+\wde{3.1.8} Let $S$ and $T$ be sets. A function $g \colon S \to T$ is: \textbf{(i)} \textit{injective} if for all $s, s' \in S$, $g(s) = g(s') \implies s = s'$; \textbf{(ii)} \textit{surjective} if for all $t \in T$, there exists $s \in S$ such that $g(s) = t$; \textbf{(iii)} \textit{bijective} if it is injective and surjective.
+\wl{3.1.11} Let $f \colon X \to Y$ be a function and $y \in Y$. Then the inclusion $f^{-1}(y) \hookrightarrow X$ is injective.

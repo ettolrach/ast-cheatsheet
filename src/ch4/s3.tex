@@ -1,14 +1,11 @@
-\wde{4.3.X $\iso$} An arrow decorated with a $\sim$, as in $A \iso B$, denotes an isomorphism.
-\wc{4.3.2} Let $\cat A$ be a locally small category and $X: \cat{A}^{\op} \to \Set$. Then a representation of $X$ consists of an object $A \in \cat A$ together with an element $u \in X(A)$ such that: 
-for each $B \in \cat{A}$ and $x \in X(B)$, there is a unique map $\Bar{x}: B \to A$ such that $(X\Bar{x})(u) = x$.
-\wc{4.3.3} Let $\cat A$ be a locally small category and $X: \cat{A} \to \Set$. Then a representation of $X$ consists of an object $A \in \cat A$ together with an element $u \in X(A)$ such that: 
-for each $B \in \cat{A}$ and $x \in X(B)$, there is a unique map $\Bar{x}: A \to B$ such that $(X\Bar{x})(u) = x$.
-\wc{4.3.7} For any locally small category $\cat A$, the Yoneda embedding 
-$H_\bullet : \cat A \to [\cat{A}^{\op}, \Set]$ 
-is full and faithful.
-\wl{4.3.8} Let $J: \cat A \to \cat B$ be a full and faithful functor and $A, A' \in \cat A$. Then:
-(a) a map $f$ in $\cat A$ is an isomorphism if and only if the map $J(f)$ in $\cat B$ is an isomorphism;
-(b) for any isomorphism $g: J(A) \to J(A')$ in $\cat B$, there is a unique isomorphism $f: A \to A'$ in $\cat A$ such that $J(f) = g;$ 
-(c) the objects $A$ and $A'$ of $\cat A$ are isomorphic if and only if the objects $J(A)$ and $J(A')$ of $\cat B$ are isomorphic.
-\wc{4.3.10} Let $\cat A$ be a locally small category and $A, A' \in \cat A$. Then
-$H_A \cong H_{A'} \iff A \cong A' \iff H^A \cong H^{A'}.$
+\wde{4.3.2 Intersection} Let $X$ be a set and $A, B \subseteq X$. Their \textit{intersection} $A \cap B$ is the subset of $X$ whose characteristic function is the composite $X \xrightarrow{(\chi_A, \chi_B))} \mathbf{2} \times \mathbf{2} \xrightarrow{\wedge} \mathbf{2}$.
+\wl{4.3.3} Let $X$ be a set and $A, B \subseteq X$. Then for $x \in X$, $x \in_X A \cap B \iff (x \in_X A \text{ and } x \in_X B)$.
+\wde{4.3.4 Union} Let $X$ be a set and $A, B \subseteq X$. Their \textit{union} $A \cup B$ is the subset of $X$ whose characteristic function is the composite $X \xrightarrow{(\chi_A, \chi_B)} \mathbf{2} \times \mathbf{2} \xrightarrow{\vee} \mathbf{2}$.
+\wl{4.3.5} Let $X$ be a set and $A, B \subseteq X$. Then for $x \in X$, $x \in_X A \cup B \iff (x \in_X A \text{ or } x \in_X B)$.
+\wde{4.3.6 Complement} Let $X$ be a set and $A \subseteq X$. Its \textit{complement} $X \setminus A$ is the subset of $X$ whose characteristic function is the composite $X \xrightarrow{\chi_A} \mathbf{2} \xrightarrow{\neg} \mathbf{2}$.
+\wl{4.3.7} Let $X$ be a set and $A \subseteq X$. Then for $x \in X$, $x \in_X X \setminus A \iff x \not \in_X A$.
+\wl{4.3.9 Set laws} Let $X$ be a set and $A, B, C \subseteq X$. Then the following laws hold. \textbf{(i)} Intersection laws: $\cap$ is commutative, associative, and reflexive, as well as $A \cap X = A$. \textbf{(ii)} Union laws: $\cup$ is commutative, associative, and reflexive, as well as $A \cup \emptyset = A$. \textbf{(iii)} Distributive laws: $\cap$ distributes over $\cup$, $\cup$ distributes over $\cap$, and $A \cap \emptyset = A$ and $A \cup X = X$. \textbf{(iv)} De Morgan's laws: $X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$ and $X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$ \textbf{(v)} Complement laws: $A \cup (X \setminus A) = X$, $A \cap (X \setminus A) = \emptyset$, and $X \setminus (X \setminus A) = A$.
+\wde{4.3.11 Relative complement} Let $X$ be a set and $A, B \subseteq X$. The \textit{relative complement} $B \setminus A$ is $B \cap (X \setminus A)$.
+\wl{4.3.12} Let $X$ be a set and $A, B \subseteq X$. Then for $x \in X$, $x \in_B B \setminus A \iff x \in_X B \text{ and } x \not \in_X A$.
+\wde{4.3.13} Let $X$ and $I$ be sets, and let $(A_i)_{i \in I} \in \mathscr{P}(X)^I$ be an $I$-indexed family of subsets of $X$. \textbf{(i)} The \textit{intersection} $\bigcap_{i \in I} A_i$ is the subset of $X$ whose characteristic function is the composite $X \xrightarrow{(\chi_{A_i})_{i \in I}} \mathbf{2}^I \xrightarrow{\bigwedge_I} \mathbf{2}$. \textbf{(ii)} The \textit{union} $\bigcup_{i \in I} A_i$ is the subset of $X$ whose characteristic function is the composite $X \xrightarrow{(\chi_{A_i})_{i \in I}} \mathbf{2}^I \xrightarrow{\bigvee_I} \mathbf{2}$.
+\wl{4.3.14} Let $X$ and $I$ be ssets, and let $(A_i)_{i \in I} \in \mathscr{P}(X)^I$ be an $I$-indexed family of subsets of $X$. Then for $x \in X$, \textbf{(i)} $x \in_X \bigcap_{i \in I} A_i \iff x \in_X A_i$ for all $i \in I$; \textbf{(ii)} $x \in_X \bigcup_{i \in I} A_i \iff x \in_X A_i$ for some $i \in I$.

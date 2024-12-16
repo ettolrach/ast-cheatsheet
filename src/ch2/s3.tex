@@ -1,19 +1,6 @@
-\wde{2.3.1 Comma Category} Given categories and functors 
-\begin{tikzcd}[ampersand replacement=\&,cramped,sep=scriptsize]
-	\& \cat{B} \\
-	\cat{A} \& {\cat{C}}
-	\arrow["Q", from=1-2, to=2-2]
-	\arrow["P"', from=2-1, to=2-2]
-\end{tikzcd}, the \textbf{comma category} $(P \Rightarrow Q)$ (oft written $(P \comma Q)$) is the category defined as: objects are triples $(A, h, B)$ with $A \in \cat A$, $B \in \cat B$ and $h : P(A) \to Q(B)$ in $\cat C$; maps $(A,h,B) \to (A',h',B')$ are pairs $(f: A \to A', g: B \to B')$ of map such that the square 
-\begin{tikzcd}[ampersand replacement=\&,cramped,sep=scriptsize]
-	{P(A)} \& {P(A')} \\
-	{Q(B)} \& {Q(B')}
-	\arrow["{P(f)}", from=1-1, to=1-2]
-	\arrow["{h'}", from=1-2, to=2-2]
-	\arrow["h"', from=1-1, to=2-1]
-	\arrow["{Q(s)}"', from=2-1, to=2-2]
-\end{tikzcd} commutes.
-\wde{2.3.3 Slice Category} Given $A \in \cat{A}$, the \textbf{slice category} $\cat{A}/A$ has as objects maps into $A$ (a pair $(X, h)$ with $X \in \cat{A}$ and $h : X \to A$) and commutative triangles as morphisms (a map $(X, h) \to (X', h')$ in $\cat{A}/A$ is a map $f : X \to X'$ such that $h = h' \circ f$). $\cat{A}/A \cong (1_\cat{A} \Rightarrow A)$. Dually, the coslice category $A/\cat{A} \cong (A \Rightarrow 1_\cat{A})$ has maps out of $A$ as its objects.
-\wl{2.3.5} Take an adjunction $\cat{A} \ladj{F}{G} \cat B$  and an object $A \in \cat A$. Then the unit map $\eta_A : A \to GF(A)$ is an initial object of $(A \Rightarrow G)$.
-\wt{2.3.6} Take categories and functors $\cat A \isofuncs{F}{G} \cat B$. There is a one-to-one correspondence between: (a) adjunctions between $F$ and $G$, (with $F$ on the left and $G$ on the right); (b) natural transformations $\eta : 1_{\cat{A}} \to GF$ such that $\eta_A : A \to GF(A)$ is initial in $(A \Rightarrow G)$ for every $A \in \cat{A}$.
-\wc{2.3.7} Let $G: \cat{B} \to \cat{A}$ be a functor. Then $G$ has a left adjoint if and only if for each $A \in \cat{A}$, the  category $(A \Rightarrow G)$ has an initial object.
+\wde{2.3.1 Terminal set} A set $T$ is \textit{terminal} if for all sets $X$, there is a unique function from $X$ to $T$. The definition of terminal set is the simplest example of a so-called \textit{universal property}.
+\wax{2: Terminal set} There exists a terminal set, $\mathbf{1}$.
+\wl{2.3.3} Any set isomorphic to a terminal set is terminal.
+\wl{2.3.4} Any two terminal sets are isomorphic.
+\wde{2.3.6 Element} An \textit{element} of a set $X$ is a function $\mathbf{1} \to X$. We write $x \in X$ to mean $x \colon \mathbf{1} \to X$.
+\wl{2.3.7} \textbf{(i)} For all sets $X$ and elements $x \in X$, we have $\id_X(x) = x$. \textbf{(ii)} For all sets and functions $X \xrightarrow{f} Y \xrightarrow{g} Z$ and elements $x \in X$, we have $(g \circ f)(x) = g(f(x))$.

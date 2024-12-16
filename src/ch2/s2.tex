@@ -1,21 +1,9 @@
-\wde{2.2.X Unit \& Counit} Given $\cat A \ladj{F}{G} \cat B$, for each $A \in \cat A$ we have a map $(A \map{\eta_A} GF(A)) = \overline{(F(A) \map{1} F(A))}$, dually for each $B \in \cat B$ we have a map $(FG(B) \map{\varepsilon_B} B) = \overline{(G(B) \map{1} G(B))}.$ These define natural transformations $\eta : 1_{\cat A} \to G \circ F$, $\varepsilon : F \circ G \to 1_{\cat B}$, called the \textbf{unit} and \textbf{counit} respectively.
-\wl{2.2.2} Given an adjunction $F \dashv G$ with unit $\eta$ and counit $\varepsilon$, the triangles 
-\begin{tikzcd}[cramped, sep=scriptsize]
-	F & FGF \\
-	& F
-	\arrow["{F\eta}", from=1-1, to=1-2]
-	\arrow["{{\varepsilon}{F}}", from=1-2, to=2-2]
-	\arrow["{1_F}"', from=1-1, to=2-2]
-\end{tikzcd}   
-\begin{tikzcd}[cramped, sep=scriptsize]
-	G & GFG \\
-	& G
-	\arrow["{{\eta}{G}}", from=1-1, to=1-2]
-	\arrow["{G\varepsilon}", from=1-2, to=2-2]
-	\arrow["{1_G}"', from=1-1, to=2-2]
-\end{tikzcd} 
-commute.
-\wl{2.2.4} Let $\cat A \ladj{F}{G} \cat B$ be an adjunction, with unit $\eta$ and counit $\varepsilon$. Then $\overline{g} = G(g) \circ \eta_A$ for any $g: F(A) \to B$, and $\overline{f} = \varepsilon_B \circ F(f)$ for any $f : A \to G(B)$.
-\wt{2.2.5} Take categories and functors $\cat A \isofuncs{F}{G} \cat B$. There is a one-to-one correspondence between: (a) adjunctions between $F$ and $G$ (with $F$ on the left and $G$ on the right); (b) pairs $(1_{\cat{A}} \map{\eta} GF, FG \map{\varepsilon} 1_{\cat{B}}$ of natural transformations satisfying the triangle identities (2.2.2).
-\wc{2.2.7} An adjunction between ordered sets consists of order-pre-serving maps $A \isofuncs{f}{g} B$ such that $\forall a \in A, \forall b \in B, \ f(a) \le b \iff a \le g(b)$.
-\we{2.2.8} An equivalence $(F, G, \eta, \varepsilon)$ of categories is not necessarily an adjunction (there is no reason for the triangle inequalities to hold), however it is true that $F$ is left adjoint to $G$ and $G$ is right adjoint to $F$.
+\wde{Data} Some things are called \textit{sets}; for each set $X$ and set $Y$, some things called \textit{functions from $X$ to $Y$}, with functions $f$ from $X$ to $Y$ written as $f \colon X \to Y$; for each set$X$, set $Y$ and set $Z$, an operation called $composition$ assigning to each $f \colon X \to Y$ and $f \colon Y \to Z$ a function $g \circ f \colon X \to Z$; for each set $X$, a function $\text{id}_X \colon X \to X$, called an \textit{identity function}.
+\wax{1: Associativity and identity} Composition of functions is associative: for all sets $W, X, Y, Z$ and functions $W \xrightarrow{f} X \xrightarrow{g} Y \xrightarrow{h} Z$, we have $h \circ g \circ f = h \circ (g \circ f)$. It also satisfies identity laws: for all sets $X$ and $Y$ and functions $f \colon X \to Y$, we have $f \circ \text{id}_X = f = id_Y \circ f$.
+\wde{2.2.2 Inverse} Let $f \colon X \to Y$ be a function. An \textit{inverse} of $f$ is a function $g \colon X \to Y$ such that $g \circ f = id_X$ and $f \circ g = id_Y$.
+\wl{2.2.4} A function has at most one inverse.
+\wde{2.2.5 Invertible} A function is an \textit{isomorphism} or \textit{invertible} if it has an inverse.
+\wl{2.2.6} \textbf{(i)} For all sets $X$, the identity function $\text{id}_X$ is an isomorphism, and $\text{id}_X^{-1} = \text{id}_X$. \textbf{(ii)} For all sets and functions $X \xrightarrow{f} Y \xrightarrow{g} Z$, if $f$ and $g$ are  isomorphisms then so is $g \circ f$, and $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$. \textbf{(iii)}. For all functions $f \colon X \to Y$, if $f$ is an isomorphism then so is $f^{-1}$, and
+$(f^{-1})^{-1} = f$.
+\wde{2.2.8 Set isomorphism} Sets $X$ and $Y$ are \textit{isomorphic}, written as $X \cong Y$, if there exists an isomorphism from $X$ to $Y$.
+\wl{2.2.9} \textbf{(i)} $X \cong X$ for all sets $X$. \textbf{(ii)} If $X \cong Y \cong Z$ then $X \cong Z$, for all sets $X$, $Y$, and $Z$. \textbf{(iii)} If $X \cong Y$ then $Y \cong X$, for all sets $X$ and $Y$.

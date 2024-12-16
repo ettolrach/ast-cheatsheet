@@ -1,0 +1,23 @@
+\wde{2.6.2} Let $X$ and $Y$ be sets. A \textit{product} of $X$ and $Y$ consists of sets and functions $X \xleftarrow{p} P \xrightarrow{q} Y$ with the following property: for all sets $A$ and functions $f \colon A \to X$ and $g \colon A \to Y$, ther eis a unique function $h \colon A \to P$ such that $o \circ h = f$ and $q \circ h = g$. We call $X \xleftarrow{p} P \xrightarrow{q} Y$ a \textit{product diagram} and $p$ and $q$ are called \textit{projections}.
+\wax{5: Products} Let $X$ and $Y$ be sets. Then $X$ and $Y$ have a product.
+\wl{2.6.6} Let $X \xleftarrow{p} P \xrightarrow{q} Y$ and $X \xleftarrow{p'} P' \xrightarrow{q'} Y$ be sets and functions, and suppose there exists an isomorphism $j \colon P \to P'$ such that the diagram
+% The "\cong" label was added manually.
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJQIl0sWzAsMSwiWCJdLFsyLDEsIlkiXSxbMSwyLCJQJyJdLFswLDMsImoiXSxbMywxLCJwJyJdLFswLDEsInAiLDJdLFswLDIsInEiLDJdLFszLDIsInEnIiwyXV0=
+\[\begin{tikzcd}[cramped, row sep=tiny]
+	& P \\
+	X && Y \\
+	& {P'}
+	\arrow["p"', from=1-2, to=2-1]
+	\arrow["q", from=1-2, to=2-3]
+	\arrow["j", "\cong"', from=1-2, to=3-2]
+	\arrow["{p'}", from=3-2, to=2-1]
+	\arrow["{q'}"', from=3-2, to=2-3]
+\end{tikzcd}\]
+commutes. If one of the first two diagrams is a product then so is the other.
+\wl{2.6.8} Let $X \xleftarrow{p} P \xrightarrow{q} Y$ and $X \xleftarrow{p'} P' \xrightarrow{q'} Y$ be product diagrams. Then there is a unique isomorphism $j \colon P \to P'$ ssuch that the diagram [same as the earlier diagram in 2.6.6] commutes. In particular, $P \cong P'$.
+\wde{no number} We write $X \xleftarrow{\fst^{X, Y}} X \times Y \xrightarrow{\snd^{X, Y}}$ for the projections. We often abbreviate to just $\fst$ and $\snd$.
+\wde{no number} Given sets and functions $X \xleftarrow{f} X \times Y \xrightarrow{g}$, we write $(f, g) \colon A \to X \times Y$ for the unique $A \to X \times Y$ satisfying $\fst \circ (f, g) = f$, $\snd \circ (f, g) = g$.
+\wl{2.6.10} Take sets and functions $X \xleftarrow{f} A \xrightarrow{g} Y$. Then $(f, g)(a) = (f(a), g(a))$ for all $a \in A$.
+\we{2.6.11 i.} For every set $X$, the functions $X \xleftarrow{\id_X} X \xrightarrow{\id_X} X$ give rise to the \textit{diagonal function} $\triangle_X = (\id_X, \id_X) \colon X \to X \times X$. By lemma 2.6.10, $\triangle_X(x) = (x, x)$ for all $x \in X$.
+\wl{2.6.13} Let $X \xrightarrow{f} X'$ anad $Y \xrightarrow{g} Y'$ be functions. Then there is a unique function $f \times g \colon X \times Y \to X' \times Y'$ such that $(f \times g)(x, y) = (f(x), g(y))$ for all $x \in X$ and $y \in Y$.
+\wpr{2.6.15} \textbf{(i)} $X \times Y \cong Y \times X$ for all sets $X$ and $Y$. \textbf{(ii)} $X \times \textbf{1} \cong X$ for all sets $X$. \textbf{(iii)} $(X \times Y) \times Z \cong X \times (Y \times Z)$ for all sets $X, Y, Z$.
