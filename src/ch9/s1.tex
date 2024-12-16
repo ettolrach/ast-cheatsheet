@@ -1,0 +1,7 @@
+\wde{9.1.11 AoC equivalents} A statement $S$ is \textit{equivalent to the axiom of choice} if \textbf{(i)} Axioms 1-9 together with the axiom of choice imply $S$, and \textbf{(ii)} Axioms 1-9 together with $S$ imply the axiom of choice.
+\wde{no number, Product of a family} Formally, for a family $X \xrightarrow{p} I$, we define its \textit{product} to be $\prod_{i \in I} X_i = \{ \text{sections of p} \} = \{ x \in X^I \colon p \circ x = \id_I \}$. We usually write elements $x \in \prod_{i \in I} X_i$ as $(x_i)_{i \in I}$, where $x_i = x(i)$.
+\wde{no number, Total relation} A relation $R$ between ssets $X$ and $Y$ is \textit{total} if for all $x \in X$, there exists $y \in Y$ such that $xRy$.
+\wde{no number, (A function) refine(s)} A function $f \colon X \to Y$ \textit{refines} $R$ if $xRf(x)$ for all $x \in X$.
+\wde{no number, Choice function} A \textit{choice function} on $X$ is a function $f \colon \Pow(X) \setminus \emptyset \to X$ such that $f(A) \in A$ for all $A \in \Pow(X) \setminus \emptyset$.
+\wde{no number, System of representatives} A \textit{system of representatives} for $\sim$ is a subset $A$ of $X$ with the following properoty: for all $x \in X$, there exists a unique $a \in A$ such thta $x \sim a$.
+\wpr{9.1.4}  Each of the following statements is equivalent to the axiom of choice. \textbf{(i)} The product of any family of nonempty sets is nonempty. \textbf{(ii)} Every total relation can be refined to a function. \textbf{(iii)} Every set has a choice function. \textbf{(iv)} Every equivalence relation has a system of representatives.
