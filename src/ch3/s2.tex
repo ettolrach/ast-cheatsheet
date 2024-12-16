@@ -1,43 +1,44 @@
-\wde{3.2.1 Subset classifier} A \textit{subset classifier} is a set $\Omega$ together with an element $t \in \Omega$, with the following property: for all sets $A$ and $X$ and injections $i \colon A \to X$, there is a unique function $\chi \colon X \to \Omega$ such that $i \colon A \to X$ is a fibre of $\chi$ over $t$. In a diagram:
+\wde{3.2.1 Subset classifier} A \textit{subset classifier} is a set $\Omega$ together with an element $t \in \Omega$, with the following property: for all sets $A$ and $X$ and injections $i \colon A \to X$, $\exists!$ fn. $\chi \colon X \to \Omega$ such that $i \colon A \to X$ is a fibre of $\chi$ over $t$. In a diagram (left):\linebreak
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzEsMCwiXFxtYXRoYmZ7MX0iXSxbMSwxLCJcXE9tZWdhIl0sWzAsMSwiWCJdLFswLDFdLFsxLDIsInQiXSxbMCwzLCJpIiwyXSxbMywyLCJcXGNoaSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
-\[\begin{tikzcd}[cramped]
-	A & {\mathbf{1}} \\
-	X & \Omega
-	\arrow[from=1-1, to=1-2]
-	\arrow["i"', from=1-1, to=2-1]
-	\arrow["t", from=1-2, to=2-2]
-	\arrow["\chi"', dashed, from=2-1, to=2-2]
-\end{tikzcd}\]
-\wax{8: Subsets} There exists a subset classifier.
-\wl{3.2.2} Let $\Omega$ and $\Omega'$ be sets, and let $t \in \Omega$ and $t' \in \Omega'$. Suppose there exists an isomorphism $j \colon \Omega \to \Omega'$ such that $j(t) = t'$. Then $\Omega$ together with $t$ is a subset classifier if and only if $\Omega'$ together with $t'$ is.
-\wl{3.2.3} Let $\Omega$ together with $t \in \Omega$ be a subset classifier, and let $\Omega'$ together with $t' \in \Omega'$ be another subset classifier. Then there is a unique isomorphism $j \colon \Omega \to \Omega'$ such that $j(t) = t'$.
-\wde{no number} We denote the subset classifier by $\mathbf{2}$ and its distinguishing element by $\textsf{T}$ [in a later chapter, we have the other element being $\mathsf{F}$]. Given an injection $A \xrightarrow{i} X$, we write $\chi_i$ for the unique function $X \to \mathbf{2}$ whose fibre over $\mathsf{T}$ is $A \xrightarrow{i} X$. It is called the characteristic function of $i$. In a diagram:
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJBIl0sWzEsMCwiXFxtYXRoYmZ7MX0iXSxbMSwxLCJcXG1hdGhiZnsyfSJdLFswLDEsIlgiXSxbMCwxXSxbMSwyLCJcXG1hdGhzZntUfSJdLFswLDMsImkiLDJdLFszLDIsIlxcY2hpX2kiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
 \[\begin{tikzcd}[cramped]
-	A & {\mathbf{1}} \\
-	X & {\mathbf{2}}
-	\arrow[from=1-1, to=1-2]
-	\arrow["i"', from=1-1, to=2-1]
-	\arrow["{\mathsf{T}}", from=1-2, to=2-2]
-	\arrow["{\chi_i}"', dashed, from=2-1, to=2-2]
+    A & {\mathbf{1}} \\
+    X & \Omega
+    \arrow[from=1-1, to=1-2]
+    \arrow["i"', from=1-1, to=2-1]
+    \arrow["t", from=1-2, to=2-2]
+    \arrow["\chi"', dashed, from=2-1, to=2-2]
+\end{tikzcd}
+\begin{tikzcd}[cramped]
+    A & {\mathbf{1}} \\
+    X & {\mathbf{2}}
+    \arrow[from=1-1, to=1-2]
+    \arrow["i"', from=1-1, to=2-1]
+    \arrow["{\mathsf{T}}", from=1-2, to=2-2]
+    \arrow["{\chi_i}"', dashed, from=2-1, to=2-2]
 \end{tikzcd}\]
+
+\wax{8: Subsets} There exists a subset classifier.
+\wl{3.2.2} Let $\Omega$ and $\Omega'$ be sets, and let $t \in \Omega$ and $t' \in \Omega'$. Suppose $\exists$ an isomorphism $j \colon \Omega \to \Omega'$ such that $j(t) = t'$. Then $\Omega$ together with $t$ is a subset classifier iff $\Omega'$ together with $t'$ is.
+\wl{3.2.3} Let $\Omega$ together with $t \in \Omega$ be a subset classifier, and let $\Omega'$ together with $t' \in \Omega'$ be another subset classifier. Then $\exists!$ isomorphism $j \colon \Omega \to \Omega'$ such that $j(t) = t'$.
+\wde{n.n.} We denote the subset classifier by $\mathbf{2}$ and its distinguishing element by $\textsf{T}$. Given an injection $A \xrightarrow{i} X$, we write $\chi_i$ for the unique fn. $X \to \mathbf{2}$ whose fibre over $\mathsf{T}$ is $A \xrightarrow{i} X$. It's the characteristic fn. of $i$. In a diagram: [above right].
 \wl{3.2.5} Let $i \colon A \to X$ be an injection and $x \in X$. Then $\chi_i(x) = \mathsf{T} \iff$ there exists $a \in A$ such that $i(a) = x$. (Since $i$ is injective, the $a$ here is necessarily unique.)
-\wde{no number} For an injection $A \xrightarrow{i} X$, we sometimes write $\chi_i$ as $\chi_A$ and call it the characteristic function of $A$.
-\wde{3.2.8 Subset} Let $X$ be a set. A \textit{subset} of $X$ is a function $X \to \mathbf{2}$.
+\wde{n.n.} For an injection $A \xrightarrow{i} X$, we sometimes write $\chi_i$ as $\chi_A$ and call it the characteristic fn. of $A$.
+\wde{3.2.8 Subset} Let $X$ be a set. A \textit{subset} of $X$ is a fn. $X \to \mathbf{2}$.
 \wde{3.2.9 Power set} Let $X$ be a set. The \textit{power set} of $X$ is $\mathbf{2}^X$, also written as $\mathscr{P}(X)$.
-\wde{3.2.12 Isomorphism over a set} Let $X$ be a set. Two functions $A \xrightarrow{i} X$ and $A' \xrightarrow{i'} X$ are \textit{isomorphic over X} if there exists an isomorphism $j \colon A \to A'$ such that the diagram
+\wde{3.2.12 Isomorphism over a set} Let $X$ be a set. Two fn.s $A \xrightarrow{i} X$ and $A' \xrightarrow{i'} X$ are \textit{isomorphic over X} if there exists an isomorphism $j \colon A \to A'$ such that the diagram
 % https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzIsMCwiQSciXSxbMSwxLCJYIl0sWzAsMSwiaiJdLFsxLDIsImknIl0sWzAsMiwiaSIsMl1d
 \[\begin{tikzcd}[cramped,row sep=tiny]
-	A && {A'} \\
-	& X
-	\arrow["j", "\cong"', from=1-1, to=1-3]
-	\arrow["i"', from=1-1, to=2-2]
-	\arrow["{i'}", from=1-3, to=2-2]
+    A && {A'} \\
+    & X
+    \arrow["j", "\cong"', from=1-1, to=1-3]
+    \arrow["i"', from=1-1, to=2-2]
+    \arrow["{i'}", from=1-3, to=2-2]
 \end{tikzcd}\]
 commutes. We then write $(A \xrightarrow{i} X) \cong (A' \xrightarrow{i'} X)$ or, less formally, $A \cong_X A'$.
 \wl{3.2.16} Let $X$ be a set, and let $A \xrightarrow{i} X$ and $A' \xrightarrow{i'} X$ be injections. Then $(A \xrightarrow{i} X) \cong (A' \xrightarrow{i'} X) \iff \chi_i = \chi_{i'}$. Or in more casual notation, $A \cong_X A' \iff \chi_A = \chi_{A'}$.
-\wl{no number} There is a one-to-one correspondence between the functions $X \to \mathbf{2}$ and isomorphism classes of injections into $X$, where 'isomorphism' means isomorphism over $X$.
-\wpr{3.2.18} Let $i \colon A \to X$ be a function. The following are equivalent: \textbf{(i)} $i$ is an isomorphism; \textbf{(ii)} $i$ is a bijection; \textbf{(iii)} $i$ is an injection and $\chi_i(x) = \mathsf{T}$ for all $x \in X$.
-\wde{3.2.21 Initial set} A set $I$ is \textit{initial} if for all sets $X$, there is a unique function from $I$ to $X$.
-\wpr{3.2.22} A set is empty if and only if it is initial.
+\wl{n.n.} There is a one-to-one correspondence between the fn.s $X \to \mathbf{2}$ and isomorphism classes of injections into $X$, where 'isomorphism' means isomorphism over $X$.
+\wpr{3.2.18} Let $i \colon A \to X$ be a fn.. The following are equivalent: \textbf{(i)} $i$ is an isomorphism; \textbf{(ii)} $i$ is a bijection; \textbf{(iii)} $i$ is an injection and $\chi_i(x) = \mathsf{T}$ for all $x \in X$.
+\wde{3.2.21 Initial set} A set $I$ is \textit{initial} if for all sets $X$, there is a unique fn. from $I$ to $X$.
+\wpr{3.2.22} A set is empty iff it is initial.
 \wc{3.2.23} Any two empty sets are isomorphic.

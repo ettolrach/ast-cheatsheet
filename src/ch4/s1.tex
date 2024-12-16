@@ -6,11 +6,11 @@
 \wl{4.1.17} Let $X$ be a set. Let $A \xhookrightarrow{i} X$ and $B \xhookrightarrow{j} X$ be subsets of $X$. The following are equivalent: \textbf{(i)} $A \subseteq_X B$; \textbf{(ii)} $\chi_A(x) = \mathsf{T} \implies \chi_B(x) = \mathsf{T}$, for $x \in X$; \textbf{(iii)} there exists a function $k \colon A \to B$ such that the triangle
 % https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIl0sWzIsMCwiQiJdLFsxLDEsIlgiXSxbMCwyLCJpIiwyXSxbMCwxLCJrIl0sWzEsMiwiaiJdXQ==
 \[\begin{tikzcd}[cramped,row sep=tiny]
-	A && B \\
-	& X
-	\arrow["k", from=1-1, to=1-3]
-	\arrow["i"', from=1-1, to=2-2]
-	\arrow["j", from=1-3, to=2-2]
+    A && B \\
+    & X
+    \arrow["k", from=1-1, to=1-3]
+    \arrow["i"', from=1-1, to=2-2]
+    \arrow["j", from=1-3, to=2-2]
 \end{tikzcd}\]
 commutes.
 \wl{4.1.18} Let $j \colon B \to X$ be an injection, and let $k, k' \colon A \to B$ be functions such that $j \circ k = j \circ k'$. Then $k = k'$.

@@ -1,12 +1,6 @@
 \wde{4.2.1 $\mathsf{F}$} The element $\mathsf{F}$ of $\mathbf{2}$ (pronounced `false') is $\chi_{\emptyset \to \mathbf{1}}$.
 \wt{4.2.2} The subset classifier $\mathbf{2}$ has exactly two elements, $\mathsf{T}$ and $\mathsf{F}$. That is, $\mathsf{T} \neq \mathsf{F}$, and every element of $\mathbf{2}$ is equal to $\mathsf{T}$ or $\mathsf{F}$. (These are called \textit{truth values}.)
-\wc{4.2.3} Let $X$ be a set, and let $A \subseteq X$. Then for $x \in X$,
-\begin{equation*}
-	\begin{cases}
-		\mathsf{T} & \text{if } x \in_X A,\\
-		\mathsf{F} & \text{otherwise.}
-	\end{cases}
-\end{equation*}
+\wc{4.2.3} Let $X$ be a set, and let $A \subseteq X$. Then for $x \in X$, $\chi_A(x) = \mathsf{T}$ if $x \in_X A$, otherwise $\chi_A(x) = \mathsf{F}$.
 \wde{4.2.7 Negation} The \textit{negation operator} $\neg \colon \mathbf{2} \to \mathbf{2}$ is $\chi_{\{\mathsf{F}\}}$, the characteristic function of $\{\mathsf{F}\} \subseteq \mathbf{2}$.
 \wl{4.2.8} $\neg \mathsf{T} = \mathsf{F}$ and $\neg \mathsf{F} = \mathsf{T}$.
 \wl{4.2.9} $\neg \circ \neg = \id_{\mathbf{2}}$.
@@ -15,6 +9,6 @@
 \wde{4.2.15 Disjunction} The \textit{disjunction operator} $\vee \colon \mathbf{2} \times \mathbf{2} \to \mathbf{2}$ is the composite function $\mathbf{2} \times \mathbf{2} \xrightarrow{\neg \times \neg} \mathbf{2} \times \mathbf{2} \xrightarrow{\wedge} \xrightarrow{\neg} \mathsf{2}$.
 \wl{4.2.16} $\alpha \vee \beta = \mathsf{F} \iff \alpha = \beta = \mathsf{F}$. Otherwise, $\alpha \wedge \beta = \mathsf{T}$.
 \wde{4.2.17 $I$-fold conjuction operator} For a set $I$, the \textit{$I$-fold conjunction operator} $\bigwedge_I \colon \mathbf{2}^I \to \mathbf{2}$ is $\chi_{\{(\mathsf{T}_{i \in I})\}}$, the characteristic function of $\{(\mathsf{T}_{i \in I})\} \subseteq \mathbf{2}^I$. For a family $(\alpha_i)_{i \in I} \in \mathbf{2}^I$, we write $\bigwedge_I((\alpha_i)_{i \in I})$ as $\bigwedge_{i \in I} \alpha_i$.
-\wl{4.2.18} Let $I$ be a set and $(\alpha_i)_{i \in I} \in \mathbf{2}^I$. Then $\bigwedge_{i \in I} \alpha_i = \mathsf{T}$ if and only if $\alpha_i = \mathsf{T}$ for all $i \in I$.
+\wl{4.2.18} Let $I$ be a set and $(\alpha_i)_{i \in I} \in \mathbf{2}^I$. Then $\bigwedge_{i \in I} \alpha_i = \mathsf{T}$ iff $\alpha_i = \mathsf{T}$ for all $i \in I$.
 \wde{4.2.19 $I$-fold disjuction operator} Let $I$ be a set. The \textit{$I$-fold disjunction operator} $\bigvee_I \colon \mathbf{2}^I \to \mathbf{2}$ is the composite $\mathbf{2}^I \xrightarrow{\neg^I} \mathbf{2}^I \xrightarrow{\bigwedge_I} \mathbf{2} \xrightarrow{\neg} \mathbf{2}$. We write $\bigvee_I((\alpha_i)_{i \in I})$ as $\bigvee_{i \in I} \alpha_i$. So, $\bigvee_{i \in I} \alpha_i = \neg \bigwedge_{i \in I} \neg \alpha_i$.
-\wl{4.2.20} Let $I$ be a set and $(\alpha_i)_{i \in I} \in \mathbf{2}^I$. Then $\bigvee_{i \in I} \alpha_i = \mathsf{T}$ if and only if $\alpha_i = T$ for some $i \in I$.
+\wl{4.2.20} Let $I$ be a set and $(\alpha_i)_{i \in I} \in \mathbf{2}^I$. Then $\bigvee_{i \in I} \alpha_i = \mathsf{T}$ iff $\alpha_i = T$ for some $i \in I$.
