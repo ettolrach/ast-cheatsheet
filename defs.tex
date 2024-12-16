@@ -45,6 +45,30 @@
 \DeclareMathOperator{\fst}{pr_1}
 \DeclareMathOperator{\snd}{pr_2}
 \DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\Pow}{\mathscr{P}}
 \DeclareMathOperator{\inc}{in}
+\DeclareMathOperator{\lb}{lb}
+\DeclareMathOperator{\ub}{ub}
+
+% For down arrow with two heads.
+\makeatletter
+\newcommand\ddownarrow{%
+\mathrel{\mathchoice
+  {\raise2pt\hbox{%
+  \ooalign{\hss$\downarrow$\hss\cr\lower2pt\hbox{%
+  $\downarrow$}}}}
+  {\raise2pt\hbox{%
+  \ooalign{\hss$\downarrow$\hss\cr\lower2pt\hbox{%
+  $\downarrow$}}}}
+  {\raise1.5pt\hbox{%
+  \ooalign{\hss$\scriptstyle\downarrow$\hss\cr\lower1.5pt\hbox{%
+  $\scriptstyle\downarrow$}}}}
+  {\raise1.1pt\hbox{%
+  \ooalign{\hss$\scriptscriptstyle\downarrow$\hss\cr\lower1.1pt\hbox{%
+  $\scriptscriptstyle\downarrow$}}}}
+}}

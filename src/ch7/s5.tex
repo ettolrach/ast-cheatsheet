@@ -1,0 +1,9 @@
+\wde{7.5.1 Lower \& upper bound} Let $X$ be a set with an order $leq$, and let $A \subseteq X$. A \textit{lower bound} of $A$ in $X$ is an element $\ell \in X$ such that $\ell \leq a$ for all $a \in A$. We write $\lb(A) = \{ \ell \in X \colon \ell \text{ is a lower bound of } A \}$. The set $\ub(A)$ of \textit{upper bounds} is defined similarly.
+\wde{7.5.3 Dedekind cut} A \textit{Dedekind cut} is a pair $(L, U) \in \Pow(\Q) \times \Pow(\Q)$ such that $L = \lb(U)$ and $U = \ub(L)$. It is \textit{proper} if $L$ and $U$ are nonempty.
+\wde{7.5.7 $\R$} The set $\R$ of \textit{real numbers} is $\{ (L, U) \in \Pow(\Q) \times \Pow(\Q) \colon (L, U) \text{ is a proper Dedekind cut } \}$. The inclusion $i \colon \Q \to \R$ is defined by $i(q) = (\downarrow q, \uparrow q)$ where $\downarrow q = \{ r \in \Q \colon r \leq q \}$. It is injective, by antisymmetry of $\leq_{\Q}$.
+\wl{7.5.8} Let $(L, U)$ be a Dedekind cut. Then the subset $L$ of $\Q$ is \textit{downwards closed}; that is, if $q, r \in \Q$ with $q \leq r$ and $r \in L$, then $q \in L$. Similarly, $U$ is upwards closed.
+\wde{7.5.9 $\leq$ on $\R$} The relation $\leq_R$ on $\R$ is defined by $(L, U) \leq_{\R} (L', U') \iff L \subseteq L'$ for $(L, U), (L', U') \in \R$.
+\wl{7.5.11} The relation $\leq_{\R}$ on $\R$ is a total order.
+\wde{no number, least upper bound} Let $A \subseteq \R$. A \textit{least upper bound} of $A$ in $\R$ is a least element of the set of upper bounds of $A$ in $\R$, where an element $a \in A$ is \textit{least} if $a \leq b$ for all $b \in A$.
+\wt{7.5.13} Every nonempty subset of $\R$ that has an upper bound has a least upper bound. We say that $\R$ is a (Dedekind) complete ordered field.
+\wc{no number} Up to isomorphism, there is only one complete ordered field: $\R$.
